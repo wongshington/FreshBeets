@@ -27,8 +27,7 @@ class Pad {
     if (this.board.edit == true) {
       let loggerEl = document.querySelector(".logger");
       loggerEl.innerHTML =
-        loggerEl.innerHTML +
-        `<div> ${this.board.edit} , handler click func</div>`;
+        loggerEl.innerHTML + `<div> ${this.board.edit} , twice is nice</div>`;
 
       this.editSound();
     } else {
@@ -46,9 +45,7 @@ class Pad {
 
   editSound() {
     const loggerEl = document.querySelector(".logger");
-    loggerEl.innerHTML =
-      loggerEl.innerHTML +
-      `<div> ${this.board.media.state} , editSound func</div>`;
+    loggerEl.innerHTML = loggerEl.innerHTML + `<div> editSound func</div>`;
 
     if (this.board.media.state === "recording") {
       this.board.media.stop();
