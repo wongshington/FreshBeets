@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack --watch --mode=development"
+    "webpack": "webpack --watch --mode=development",
+    "sass": "sass --watch scss/index.scss:css/styles.css"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +15,7 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "howler": "^2.1.3"
+    "howler": "^2.1.3",
+    "node-sass": "^4.13.1"
   }
 }

@@ -1,26 +1,27 @@
-.grid {
-  display: grid; }
-
 main {
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .title {
   font-size: 50px;
   text-align: center;
-  margin: 20px; }
+  margin: 20px;
+}
 
 .editButton {
   width: 100px;
   height: 100px;
   cursor: pointer;
   border-radius: 5px;
-  font-size: 20px; }
+  font-size: 20px;
+}
 
 .pad-container {
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  justify-self: center; }
+  justify-self: center;
+}
 
 .pad {
   border-radius: 5px;
@@ -28,11 +29,12 @@ main {
   height: 120px;
   background-color: blue;
   overflow: hidden;
-  cursor: pointer; }
-  .pad button {
-    display: none; }
+  cursor: pointer;
+  button {
+    display: none;
+  }
+}
 
 #player {
-  display: none; }
-
-/*# sourceMappingURL=styles.css.map */
+  display: none;
+}
