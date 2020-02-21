@@ -22,8 +22,13 @@ class Pad {
     loggerEl.innerHTML =
       loggerEl.innerHTML +
       `<div> ${this.board.edit} , handler click func</div>`;
-
+    this.editSound();
     if (this.board.edit) {
+      const loggerEl = document.querySelector(".logger");
+      loggerEl.innerHTML =
+        loggerEl.innerHTML +
+        `<div> ${this.board.edit} , handler click func</div>`;
+
       this.editSound();
     } else {
       if (!this.src) return; // handles buttons that have no audio yet
