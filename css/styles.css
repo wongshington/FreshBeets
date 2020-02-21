@@ -51,6 +51,9 @@ main {
 
   .pad {
     width: 70px;
-    height: 70px; } }
+    height: 70px; }
+
+  .fas {
+    font-size: 30px; } }
 
 /*# sourceMappingURL=styles.css.map */
