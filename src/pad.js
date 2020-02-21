@@ -5,6 +5,11 @@ class Pad {
     this.board = options.board;
     this.src = localStorage.getItem(this.className);
 
+    if (!this.src) {
+      this.el.classList.add("inactive");
+    }
+
+    this.editSound = this.editSound.bind(this);
     this.handler = this.handler.bind(this);
     this.el.addEventListener("click", this.handler);
   }
@@ -21,6 +26,7 @@ class Pad {
     if (this.board.edit) {
       this.editSound();
     } else {
+      if (!this.src) return; // handles buttons that have no audio yet
       this.playPad();
     }
   }
@@ -40,6 +46,7 @@ class Pad {
 
     if (this.board.media.state === "recording") {
       this.board.media.stop();
+      this.el.classList.remove("inactive");
     } else {
       this.board.record(this);
     }

@@ -26,6 +26,7 @@ main {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   justify-self: center;
+  margin-bottom: 20px;
 }
 
 .pad {
@@ -45,6 +46,10 @@ main {
 
 .fas {
   font-size: 50px;
+}
+
+.inactive {
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 800px) {

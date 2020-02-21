@@ -75,7 +75,7 @@ class SoundBoard {
       this.editEl.innerHTML = "Edit Beet";
       this.edit = false;
     } else {
-      this.editEl.innerHTML = "Editing...";
+      this.editEl.innerHTML = "Select a Sound Pad";
       this.edit = true;
     }
   }
