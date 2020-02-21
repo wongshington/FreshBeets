@@ -1,5 +1,40 @@
 import Pad from "./pad";
 
+const COLORS = [
+  // could set up styles with each of these colors and then assign a class name at this level
+  "#FFBDC2",
+  "#FFC2EF",
+  "#A3EFFF",
+  "#FFD98A",
+  "#B3FFBE",
+  "#A7FFA3",
+  "#A8F6FF",
+  "#D494FF",
+  "#FFB499",
+  "#76528BFF",
+  "#FFA351FF",
+  "#FFBE7BFF",
+  "#2460A7FF"
+];
+const ICONS = [
+  '<i class="fas fa-robot"></i>',
+  '<i class="fas fa-running"></i>',
+  '<i class="fas fa-kiss-wink-heart"></i>',
+  '<i class="fas fa-home"></i>',
+  '<i class="fas fa-laptop-code"></i>',
+  '<i class="fas fa-snowplow"></i>',
+  '<i class="fas fa-plane"></i>',
+  '<i class="fas fa-hotdog"></i>',
+  '<i class="fas fa-lemon"></i>',
+  '<i class="fas fa-mountain"></i>',
+  '<i class="fas fa-bicycle"></i>',
+  '<i class="fas fa-star"></i>',
+  '<i class="fas fa-headphones"></i>',
+  '<i class="fas fa-baby-carriage"></i>',
+  '<i class="fas fa-hat-wizard"></i>',
+  '<i class="fas fa-toilet-paper"></i>'
+];
+
 class SoundBoard {
   constructor(options) {
     this.stream;
@@ -18,12 +53,17 @@ class SoundBoard {
   buildBoard() {
     const padContainer = document.querySelector(".pad-container");
     for (let i = 0; i < 16; i++) {
-      let div = document.createElement("div");
-      div.classList.add("pad", `pad${i}`);
+      let button = document.createElement("button");
+      button.classList.add("pad", `pad${i}`);
 
-      new Pad({ element: div, className: `pad${i}`, board: this });
+      let randColor = COLORS[Math.floor(Math.random() * COLORS.length)];
+      button.style.backgroundColor = randColor;
 
-      padContainer.appendChild(div);
+      button.innerHTML = ICONS[i];
+
+      new Pad({ element: button, className: `pad${i}`, board: this });
+
+      padContainer.appendChild(button);
     }
   }
 
