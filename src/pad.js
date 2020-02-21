@@ -4,14 +4,15 @@ class Pad {
     this.el = options.element;
     this.board = options.board;
     this.src = localStorage.getItem(this.className);
+
     this.handler = this.handler.bind(this);
     this.el.addEventListener("click", this.handler);
   }
 
-  // build click handler
   handler(e) {
     e.preventDefault();
 
+    // this is where to maybe catch a future error if the board.media isn't set up yet because user hasn't granted mic privileges
     if (this.board.edit) {
       this.editSound();
     } else {
@@ -20,18 +21,18 @@ class Pad {
   }
 
   playPad() {
+    // might need to error handle here for when this pad is clicked but there isn't a sound for it yet
     let audio = document.getElementById("player");
     audio.src = this.src;
     audio.play();
   }
 
   editSound() {
-    console.log("edit sound function");
-
-    // set up to record new audio
-
-    this.board.toggleEdit();
-    // at end of function need to toggle board's edit flag
+    if (this.board.media.state === "recording") {
+      this.board.media.stop();
+    } else {
+      this.board.record(this);
+    }
   }
 }
 
