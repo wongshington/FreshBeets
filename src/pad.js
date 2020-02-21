@@ -18,13 +18,14 @@ class Pad {
     e.preventDefault();
 
     // this is where to maybe catch a future error if the board.media isn't set up yet because user hasn't granted mic privileges
-    const loggerEl = document.querySelector(".logger");
+    let loggerEl = document.querySelector(".logger");
     loggerEl.innerHTML =
       loggerEl.innerHTML +
       `<div> ${this.board.edit} , handler click func</div>`;
-    this.editSound();
-    if (this.board.edit) {
-      const loggerEl = document.querySelector(".logger");
+
+    // this.editSound();
+    if (this.board.edit == true) {
+      let loggerEl = document.querySelector(".logger");
       loggerEl.innerHTML =
         loggerEl.innerHTML +
         `<div> ${this.board.edit} , handler click func</div>`;
