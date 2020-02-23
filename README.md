@@ -4,7 +4,7 @@
 
 ## Welcome to Fresh Beets!
 
-**Record** your favorite sounds and noises to any one of your **SoundPads** and play them back again and again whenever the moment ⚡️strikes.
+**Record** your favorite sounds and noises to any one of your **SoundPads** and play them back again and again whenever the moment ⚡️strikes. Fresh Beets is the web app for at least one your recording and playback needs!
 
 _Next time you get trapped in a conversation thats going a little too long...**play that frog🐸 noise** you saved last week! Excuse yourself and say that you must leave to go 🕵🏾‍♀️🕵🏾‍♂️🔎🔎investigate._
 
@@ -22,6 +22,7 @@ The Limit is your own imagination and vocal chord range!
 
 # Coming Soon...
 
+- MOBILE FRIENDLY!!!(can't come any sooner am I right?!)
 - Play your favorite **Fresh Beats** over a loop and make your own **Fresh Track**!
 
 # Technologies
