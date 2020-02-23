@@ -85,16 +85,16 @@ class SoundBoard {
 
     this.media.ondataavailable = e => {
       if (e.data.size > 0) {
-        const loggerEl = document.querySelector(".logger");
-        loggerEl.innerHTML =
-          loggerEl.innerHTML + `<div>  pushin sounds func</div>`;
+        // const loggerEl = document.querySelector(".logger");
+        // loggerEl.innerHTML =
+        //   loggerEl.innerHTML + `<div>  pushin sounds func</div>`;
         audioSections.push(e.data);
       }
     };
 
     this.media.onstop = () => {
-      const loggerEl = document.querySelector(".logger");
-      loggerEl.innerHTML = loggerEl.innerHTML + `<div> on Stop func</div>`;
+      // const loggerEl = document.querySelector(".logger");
+      // loggerEl.innerHTML = loggerEl.innerHTML + `<div> on Stop func</div>`;
       const source = new Blob(audioSections);
       this.processMedia(source);
     };
@@ -105,9 +105,9 @@ class SoundBoard {
   processMedia(source) {
     const fileReader = new FileReader();
 
-    const loggerEl = document.querySelector(".logger");
-    loggerEl.innerHTML =
-      loggerEl.innerHTML + `<div> ${source.slice(0, 50)} , process MEdia</div>`;
+    // const loggerEl = document.querySelector(".logger");
+    // loggerEl.innerHTML =
+    //   loggerEl.innerHTML + `<div> ${source.slice(0, 50)} , process MEdia</div>`;
 
     fileReader.onload = e => {
       let result = "data:audio/wav;" + e.target.result.slice(30); //format base64 string
