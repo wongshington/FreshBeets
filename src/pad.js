@@ -40,14 +40,9 @@ class Pad {
   }
 
   editSound() {
-<<<<<<< HEAD
-    const loggerEl = document.querySelector(".logger");
-    loggerEl.innerHTML = loggerEl.innerHTML + `<div> editSound func</div>`;
-=======
     // const loggerEl = document.querySelector(".logger");
     // loggerEl.innerHTML =
     //   loggerEl.innerHTML + `<div> ${this.board.media} , editSound func</div>`;
->>>>>>> master
 
     if (this.board.media.state === "recording") {
       this.board.media.stop();
