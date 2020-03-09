@@ -23,7 +23,7 @@ class Main {
   }
 
   connectStream() {
-    console.log("this?");
+    // console.log("this?");
     navigator.mediaDevices
       .getUserMedia({ audio: true, video: false })
       .then(stream => {
