@@ -4,6 +4,22 @@ class Main {
   constructor() {
     this.board = new SoundBoard();
     this.connectStream.apply(this);
+    this.infoListeners();
+  }
+
+  infoListeners() {
+    const info = document.querySelector(".info");
+    const close = document.querySelector(".close");
+    const instructions = document.querySelector(".instructions");
+
+    info.addEventListener(
+      "click",
+      () => (instructions.style.display = "block")
+    );
+    close.addEventListener(
+      "click",
+      () => (instructions.style.display = "none")
+    );
   }
 
   connectStream() {
